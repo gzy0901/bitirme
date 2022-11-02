@@ -1,7 +1,5 @@
 #created by Gulsah Zeynep Yigit 
-#kodu açmak için code
-#çalıştırmak için python
-import numpy as np
+
 import matplotlib.pyplot as plt
 from numpy import exp
 from math import log
@@ -30,6 +28,7 @@ v = 1e16 #frequency
 frequency = []
 Flux = []
 
+#frekans 10^16 ile değişiyor
 for v in range (10**16, 10**20, 10**16):
 
     T_s = (3*G*M*M_dot)/(8*pi*R_in*sigma)
@@ -113,8 +112,8 @@ file.close()
 plt.plot(frequency_log, Flux_log) 
 
 # naming the x axis 
-plt.xlabel('frequency v (Hz)') 
+plt.xlabel('log frequency v (Hz)') 
 # naming the y axis 
-plt.ylabel('Flux_v') 
+plt.ylabel('log Flux_v') 
 
 plt.show() 
